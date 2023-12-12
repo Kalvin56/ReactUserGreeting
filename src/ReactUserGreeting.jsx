@@ -2,6 +2,7 @@ import React from 'react'
 
 const ReactUserGreeting = ({name}) => {
   const hour = new Date().getHours()
+  let greeting = ""
   
   switch (true) {
     case hour < 12:
