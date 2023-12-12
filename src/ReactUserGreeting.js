@@ -1,9 +1,7 @@
 import React from 'react'
 
 const ReactUserGreeting = ({name}) => {
-  const date = new Date().toLocaleTimeString()
-  const hour = date.split(":")[0]
-  let greeting = ""
+  const hour = new Date().getHours()
   
   switch (true) {
     case hour < 12:
@@ -16,6 +14,7 @@ const ReactUserGreeting = ({name}) => {
       greeting = "Bonsoir"
       break;
   }
+  
   return (
     <div>
       {greeting}, {name} !
